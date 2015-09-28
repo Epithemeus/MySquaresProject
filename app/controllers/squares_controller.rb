@@ -10,12 +10,26 @@ class SquaresController < ApplicationController
     @square = Square.find(params[:id])
   end
 
+  def edit
+    @square = Square.find(params[:id])
+  end
+
   def create
     @square = Square.new(square_params)
 
     @square.save
-    redirect_to '/index.html'
+    redirect_to '/squares/index.html'
   end
+
+  def update
+  @square = Square.find(params[:id])
+ 
+  if @square.update(square_params)
+    redirect_to @square
+  else
+    render 'edit'
+  end
+end
 
   private
     def square_params
