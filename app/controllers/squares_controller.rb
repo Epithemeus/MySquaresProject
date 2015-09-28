@@ -14,7 +14,7 @@ class SquaresController < ApplicationController
     @square = Square.new(square_params)
 
     @square.save
-    #redirect_to @article
+    redirect_to @square
   end
 
   private
