@@ -18,17 +18,24 @@ class SquaresController < ApplicationController
     @square = Square.new(square_params)
 
     @square.save
-    redirect_to '/squares/index.html'
+    redirect_to squares_path
   end
 
   def update
-  @square = Square.find(params[:id])
- 
-  if @square.update(square_params)
-    redirect_to @square
-  else
+    @square = Square.find(params[:id])
+
+    if @square.update(square_params)
+      redirect_to squares_path  else
     render 'edit'
   end
+
+  def destroy
+    @square = Square.find(params[:id])
+    @square.destroy
+ 
+    redirect_to squares_path
+  end
+
 end
 
   private
