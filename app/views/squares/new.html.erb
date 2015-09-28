@@ -2,11 +2,11 @@
 <%= form_for :square, url: squares_path do |f| %>
   <p>
     <%= f.label :length %><br>
-    <%= f.number_field :length %>
+    <%= f.number_field :length in: 1..20 %>
   </p>
 
   <p>
-    <%= f.label :width in: 1..20 %><br>
+    <%= f.label :width %><br>
     <%= f.number_field :width in: 1..20 %>
   </p>
 
