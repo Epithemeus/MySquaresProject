@@ -11,7 +11,7 @@
       <td><%= square.width %></td>
       <td><%= square.length %></td>
       <td><%= link_to 'Edit', edit_square_path(square) %></td>
-      <td><%= link_to 'Delete', square_path(square),
+      <td><%= link_to 'Delete', square,
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>

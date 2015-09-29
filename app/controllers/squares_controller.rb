@@ -32,7 +32,7 @@ class SquaresController < ApplicationController
   def destroy
     @square = Square.find(params[:id])
     @square.destroy
- 
+
     redirect_to squares_path
   end
 
