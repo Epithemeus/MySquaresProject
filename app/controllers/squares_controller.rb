@@ -36,8 +36,6 @@ class SquaresController < ApplicationController
     redirect_to squares_path
   end
 
-end
-
   private
     def square_params
       params.require(:square).permit(:length, :width)
