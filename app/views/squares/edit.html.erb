@@ -1,5 +1,21 @@
 <h1>Editing a square</h1>
 
-<%= render 'form' %>
+<%= form_for :square, url: square_path(@square), method: :patch do |f| %>
+
+<p>
+  <%= f.label :length %><br>
+  <%= f.number_field :length, in: 1..20 %>
+</p>
+
+<p>
+  <%= f.label :width %><br>
+  <%= f.number_field :width, in: 1..20 %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
 
 <%= link_to 'Back', squares_path %>

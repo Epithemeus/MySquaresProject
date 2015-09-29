@@ -1,5 +1,19 @@
-<h1>Blah blah blah</h1>
+<h1>Make a Square</h1>
 
-<%= render 'form' %>
+<%= form_for :square, url: squares_path do |f| %>
+
+<p>
+  <%= f.label :length %><br>
+  <%= f.number_field :length, in: 1..20 %>
+</p>
+
+<p>
+  <%= f.label :width %><br>
+  <%= f.number_field :width, in: 1..20 %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
 
 <%= link_to 'Back', squares_path %>
