@@ -25,8 +25,10 @@ class SquaresController < ApplicationController
     @square = Square.find(params[:id])
 
     if @square.update(square_params)
-      redirect_to squares_path  else
-    render 'edit'
+      redirect_to squares_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
