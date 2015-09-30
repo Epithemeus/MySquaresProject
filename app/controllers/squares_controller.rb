@@ -1,5 +1,6 @@
 class SquaresController < ApplicationController
   def new
+    @square = Square.new
   end
 
   def index
