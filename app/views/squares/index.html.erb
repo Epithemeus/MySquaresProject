@@ -4,12 +4,14 @@
   <tr>
     <th>Length</th>
     <th>Width</th>
+    <th>Colour</th>
   </tr>
 
   <% @squares.each do |square| %>
     <tr>
       <td><%= square.width %></td>
       <td><%= square.length %></td>
+      <td><%= square.color %></td>
       <td><%= link_to 'Edit', edit_square_path(square) %></td>
       <td><%= link_to 'Delete', square_path(square),
               method: :delete,

@@ -1,0 +1,22 @@
+<%= form_for @square do |f| %>
+
+<p>
+  <%= f.label :length %><br>
+  <%= f.number_field :length, in: 1..20 %>
+</p>
+
+<p>
+  <%= f.label :width %><br>
+  <%= f.number_field :width, in: 1..20 %>
+</p>
+
+<p>
+  <%= f.label :color %><br>
+  <%= f.select_tag :color, options_for_select([["Select One", ""], "Red", "Green", "Blue", "Yellow", "Purple"]), :class => 'genForm_dropBox' %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>

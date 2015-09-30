@@ -40,6 +40,6 @@ class SquaresController < ApplicationController
 
   private
     def square_params
-      params.require(:square).permit(:length, :width)
+      params.require(:square).permit(:length, :width, :color)
     end
 end
