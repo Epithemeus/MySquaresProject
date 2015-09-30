@@ -1,4 +1,8 @@
 class SquaresController < ApplicationController
+  def all
+    @squares = Square.all
+  end
+
   def new
     @square = Square.new
   end
