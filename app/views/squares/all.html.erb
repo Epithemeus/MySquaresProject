@@ -1,17 +1,19 @@
 <%# top_position = 0 %>
 <%# left_position = 0 %>
+<% offset = 0 %>
 <% @squares.each do |square| %>
   <%# left_position = left_position + square.width %>
   <%# top_position = top_position + square.length %>
+  <% offset = offset + square.width %>
   <div style=
     "position: relative;
     <%#top: <%= square.width %>px; %>
-    left: <%= square.length %>px;
+    left: <%= offset %>px;
     width:<%= square.width %>px;
     height:<%= square.length %>px;
     border:1px solid #000;
     background-color:<%= square.color %>">
-    <%= top_position %>
-    <%= left_position %>
+    <%#= top_position %>
+    <%#= left_position %>
   </div>
 <% end %>
