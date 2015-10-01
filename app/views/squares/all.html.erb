@@ -4,7 +4,6 @@
 <% @squares.each do |square| %>
   <%# left_position = left_position + square.width %>
   <%# top_position = top_position + square.length %>
-  <% offset = offset + square.width %>
   <div style=
     "position: relative;
     left: <%= offset %>px;
@@ -15,4 +14,5 @@
     <%#= top_position %>
     <%#= left_position %>
   </div>
+  <% offset = offset + square.width %>
 <% end %>
