@@ -1,4 +1,16 @@
+<% top_position = 0 %>
+<% left_position = 0 %>
 <% @squares.each do |square| %>
-  <div style="width:<%= square.width %>px;height:<%= square.length %>px;border:1px solid #000;background-color:<%= square.color %>"></div>
+  <% left_position = top_position + square.width %>
+  <% top_positon = left_position + square.length %>
+  <div style=
+    "position: fixed;
+    top: <%= square.width %>px;
+    left: <% square.length %>px;
+    width:<%= square.width %>px;
+    height:<%= square.length %>px;
+    border:1px solid #000;
+    background-color:<%= square.color %>">
+  </div>
   <br>
 <% end %>
