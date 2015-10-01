@@ -1,8 +1,8 @@
 <% top_position = 0 %>
 <% left_position = 0 %>
 <% @squares.each do |square| %>
-  <% left_position = top_position + square.width %>
-  <% top_positon = left_position + square.length %>
+  <% left_position = left_position + square.width %>
+  <% top_positon = top_position + square.length %>
   <div style=
     "position: fixed;
     top: <%= top_position %>px;
