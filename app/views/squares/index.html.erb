@@ -20,12 +20,16 @@ table, th, td {
       <td><%= square.length %></td>
       <td><%= square.width %></td>
       <td><%= square.color %></td>
-      <td><%= link_to 'Edit', edit_square_path(square) %></td>
-      <td><%= link_to 'Delete', square_path(square),
+      <td><%= link_to 'Edit', edit_square_path(square) %>
+      <%= link_to 'Delete', square_path(square),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
-<%= button_to 'Add a new rectangle', new_square_path, method: :get %>
-<%= button_to 'Display all Rectangles', all_squares_path, method: :get %>
+<table style="border: none">
+  <tr>
+<td><%= button_to 'Add a new rectangle', new_square_path, method: :get -%></td>
+<td><%= button_to 'Display all Rectangles', all_squares_path, method: :get %></td>
+  </tr>
+</table>
