@@ -19,7 +19,7 @@ table, th, td {
     <tr>
       <td><%= square.length %></td>
       <td><%= square.width %></td>
-      <td><%= square.color %></td>
+      <td style= "background-color:<%= square.color %>"></td>
       <td><%= link_to 'Edit', edit_square_path(square) %>
       <%= link_to 'Delete', square_path(square),
               method: :delete,
